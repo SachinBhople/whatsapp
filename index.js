@@ -26,7 +26,8 @@ app.use("/api/user", userProtected, require("./routes/user.route"))
 
 app.use("*", (req, res) => {
     res.sendFile(path.join(__dirname, "dist", "index.html"))
-    res.status(404).json({ message: "resource Not foudn" })
+    // res.status(404).json({ message: "resource Not foudn" })
+    res.status(404).json({ message: "resource not found" })
 })
 
 
