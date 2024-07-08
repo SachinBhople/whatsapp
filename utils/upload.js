@@ -13,6 +13,7 @@ const storage = multer.diskStorage({
             fs.mkdirSync(url)
         }
         cb(null, url)
+
     },
 })
 const profileStorage = multer.diskStorage({
